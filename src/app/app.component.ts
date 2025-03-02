@@ -8,6 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css',
   template: `<router-outlet></router-outlet>`, // Muestra las rutas
   standalone: true
+  
 })
 export class AppComponent {
   title = 'mi-proyecto';
