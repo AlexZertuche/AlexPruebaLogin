@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    flex-wrap: wrap;
+    min-height: 70px;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+/* Sección de contenido */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+}
+
+/* Tarjetas */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Títulos */
+.card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Descripción */
+.card p {
+    font-size: 16px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+/* Listas */
+.species-list {
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+/* Imágenes */
+.card img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Botón Salir */
+.salir {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.salir:hover {
+    background-color: darkred;
+}
+
+/* 📱 Ajustes para tablets */
+@media (min-width: 768px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 400px;
+    }
+}
+
+/* 📱 Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        max-width: 400px;
+    }
+
+    .salir {
+        font-size: 18px;
+        padding: 15px 35px;
+    }
+}

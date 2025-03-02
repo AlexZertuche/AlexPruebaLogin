@@ -1,0 +1,151 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Encabezado */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+/* Formulario */
+.login-form {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 100px; /* Ajustado para evitar que el header lo tape */
+}
+
+.login-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botón */
+button {
+    width: 50%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Mensaje de error */
+.error-msg {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 📱 Ajustes para dispositivos móviles */
+@media (max-width: 1024px) {
+    .login-form {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-form {
+        width: 80%;
+    }
+
+    .header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .login-form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image-container img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .image-container img {
+        width: 120px;
+    }
+}
